@@ -25,7 +25,12 @@ export const ForsideBehandlingKort: React.FC<BehandlingProps> = async ({ behandl
 
   return (
     <section aria-label="Status på søknad">
-      <Box padding="space-16" borderWidth="1" borderColor="neutral-subtleA" borderRadius="12">
+      <Box
+        padding="space-16"
+        borderWidth={behandling.status === Status.INNVILGET ? '0' : '1'}
+        borderColor="neutral-subtleA"
+        borderRadius="12"
+      >
         <VStack gap="space-16">
           {behandling.status === Status.AVSLAG && (
             <SøknadAvslått

@@ -2,7 +2,11 @@
 
 body {
   margin: 0;
-  background-color: var(--ax-bg-default);
+}
+
+body,
+body > .aksel-theme {
+  background-color: tomato;
 }
 
 .main-content > * {
